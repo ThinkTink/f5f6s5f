@@ -11,7 +11,7 @@ export default function computeFormula(
   const lexer = new Lexer(formula);
   const tokens: Array<Token> = lexer.lex();
   const errors: Array<ValidationError> = validate(tokens);
-  console.log("make some changes");
+
   if (errors.length > 0) {
     throw new Error(JSON.stringify(errors));
   }
