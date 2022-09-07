@@ -17,6 +17,7 @@ export enum TokenType {
 }
 
 export const isTokenValue = (token: Token): boolean => {
+  console.log("more changes");
   if (!token) {
     return false;
   }

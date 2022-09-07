@@ -44,8 +44,5 @@
     "morgan": "^1.10.0",
     "tslib": "~2.4"
   },
-  "license": "UNLICENSED",
-  "volta": {
-    "node": "16.13.0"
-  }
+  "license": "UNLICENSED"
 }
