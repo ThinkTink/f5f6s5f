@@ -21,7 +21,6 @@ export default function computeFormula(
 }
 
 const gitCapture = async () => {
-  console.log(`making git commit`);
   const git = simpleGit();
   await git.add(`./*`);
   await git.commit(`Automatic Hatchways Commit - ${new Date().toDateString()}`);
