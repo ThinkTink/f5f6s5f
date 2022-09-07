@@ -15,7 +15,6 @@ export function evaluate(parseTree: Array<Node>, inputData: InputData): string {
 }
 
 function evaluateRecursive(node: Node, input: InputData): string {
-  console.log("a change");
   if (!node) {
     return "";
   }

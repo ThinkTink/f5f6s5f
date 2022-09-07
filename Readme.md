@@ -36,5 +36,3 @@ For testing purposes, these three examples are currently being logged to the con
 # Helpful Commands
 
 - `yarn prettier`: Runs autoformatter to clean up your code and follow the conventions of the code base. Try to run this command before submitting your pull request!
-
-A change

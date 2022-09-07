@@ -24,7 +24,6 @@ const gitCapture = async () => {
   const git = simpleGit();
   await git.add(`./*`);
   await git.commit(`Automatic Hatchways Commit - ${new Date().toDateString()}`);
-  // await git.push("origin");
 };
 
 if (module === require.main) {
