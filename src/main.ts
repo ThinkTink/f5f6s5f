@@ -2,7 +2,7 @@ import Lexer, { Token } from "./lexer";
 import { validate, ValidationError } from "./validation";
 import generateParseTree from "./parser";
 import { evaluate } from "./evaluate";
-const simpleGit = require("simple-git");
+import { simpleGit } from "simple-git";
 
 export default function computeFormula(
   formula: string,
