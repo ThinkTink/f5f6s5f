@@ -6,13 +6,10 @@
  *
  */
 
-import { PORT } from "../env";
 import app from "./app";
-import watch from "../watchfile";
 
+const port = process.env.PORT ?? 8080;
 
-app.listen(PORT, () => {
-  console.log(`Listening: http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Listening: http://localhost:${port}`);
 });
-
-watch();

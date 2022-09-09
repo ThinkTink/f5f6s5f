@@ -2,7 +2,7 @@ import Lexer, { Token } from "./lexer";
 import { validate, ValidationError } from "./validation";
 import generateParseTree from "./parser";
 import { evaluate } from "./evaluate";
-const simpleGit = require("simple-git");
+import { simpleGit } from "simple-git";
 
 export default function computeFormula(
   formula: string,
@@ -11,7 +11,7 @@ export default function computeFormula(
   const lexer = new Lexer(formula);
   const tokens: Array<Token> = lexer.lex();
   const errors: Array<ValidationError> = validate(tokens);
-  console.log("make some changes");
+
   if (errors.length > 0) {
     throw new Error(JSON.stringify(errors));
   }
@@ -21,11 +21,9 @@ export default function computeFormula(
 }
 
 const gitCapture = async () => {
-  console.log(`making git commit`);
   const git = simpleGit();
   await git.add(`./*`);
   await git.commit(`Automatic Hatchways Commit - ${new Date().toDateString()}`);
-  // await git.push("origin");
 };
 
 if (module === require.main) {
